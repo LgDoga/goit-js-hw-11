@@ -8,16 +8,39 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+    <header class="header">
+      <div class="header__mark">
+        <span class="header__aperture" aria-hidden="true"></span>
+        <span class="header__wordmark">Frame Finder</span>
+      </div>
+      <p class="header__tag">a contact sheet for anything you can name</p>
+    </header>
+    
+    <main class="main">
+      <form class="form" id="search-form">
+        <label class="form__label">
+          <span class="form__hint">search subject</span>
+          <input class="form__input" type="text" name="search-text" placeholder="mountains, coffee, jellyfish…"
+            autocomplete="off" required />
+        </label>
+        <button class="form__button" type="submit">
+          <span>Search</span>
+        </button>
+      </form>
+    
+      <div class="loader" id="loader" aria-hidden="true">
+        <span class="loader__frame"></span>
+        <span class="loader__frame"></span>
+        <span class="loader__frame"></span>
+      </div>
+    
+      <ul class="gallery" id="gallery"></ul>
     </main>
-
-    <load src="./partials/footer.html" />
-
+    
+    <footer class="footer">
+      <p>Images served by <a href="https://pixabay.com/" target="_blank" rel="noopener">Pixabay</a></p>
+    </footer>
+    
     <script type="module" src="./main.js"></script>
   </body>
 </html>
